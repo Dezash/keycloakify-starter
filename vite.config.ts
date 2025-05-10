@@ -7,7 +7,12 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
-            accountThemeImplementation: "none"
+            accountThemeImplementation: "none",
+            startKeycloakOptions: {
+                extensionJars: [
+                    "./providers/hidpdbugreproduce-26.2.4.jar"
+                ]
+            }
         })
     ]
 });
